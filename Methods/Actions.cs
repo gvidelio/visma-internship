@@ -152,7 +152,7 @@ namespace Services
 
                 //check whether the book exists and is taken by the user
                 while (_books.Find(y => y.ISBN == isbn) == null || 
-                    _books.Find(y => (y.ISBN == isbn) && (y.Availability != $"Taken by {bookTaker.FullName}")
+                    (_books.Find(y => (y.ISBN == isbn) && (y.Availability != $"Taken by {bookTaker.FullName}")) != null))
                 {
                     Console.WriteLine("This book is not taken by you.");
                     Console.WriteLine("Enter another ISBN: ");
