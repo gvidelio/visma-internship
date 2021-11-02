@@ -13,7 +13,6 @@ namespace Services
     {
         private string _path = @"..\..\bookJson.json";
         private List<Book> _books;
-        public Actions methods;
         private List<BookTaker> _bookTaker = new List<BookTaker>();
 
         //read json file to object
@@ -108,7 +107,7 @@ namespace Services
                 var months = Convert.ToInt32(Console.ReadLine());
                 while (months > 2)
                 {
-                    Console.WriteLine("Sorry, you can take the book for no longer than 8 weeks");
+                    Console.WriteLine("Sorry, you can take the book for no longer than 2 months. Try again:");
                     months = Convert.ToInt32(Console.ReadLine());
                 }
 
@@ -116,9 +115,7 @@ namespace Services
                 var isbn = Console.ReadLine();
 
                 //assure that the book is in the library and is not taken by someone else
-                while (_books.Find(y => y.ISBN == isbn) == null
-                    || ((_books.Find(y => y.ISBN == isbn) != null 
-                    && (_books.Find(y => y.Availability.Substring(0, 1) == "T")) == null)))
+                while (_books.Find(y => y.ISBN == isbn) == null || (_books.Find(y => y.ISBN == isbn) != null && _books.Find(y => y.Availability.Substring(0,1) == "T") != null))
                 {
                     Console.WriteLine("This book is currently unavailable");
                     Console.WriteLine("Enter another ISBN: ");
@@ -136,7 +133,7 @@ namespace Services
             var book = new Book();
             var bookTaker = new BookTaker();
             Console.WriteLine("Enter your name: ");
-            var name = Console.ReadLine();
+            bookTaker.FullName = Console.ReadLine();
 
             //check for the number of books to return
             Console.WriteLine("How many books you want to return?");
@@ -153,9 +150,7 @@ namespace Services
                 string isbn = Console.ReadLine();
 
                 //check whether the book exists and is taken by the user
-                while (_books.Find(y => y.ISBN == isbn) == null 
-                    || ((_books.Find(y => y.ISBN == isbn) != null 
-                    && (_books.Find(y => y.Availability.Substring(9) == $"{name}")) == null)))
+                while (_books.Find(y => y.ISBN == isbn) == null || ((_books.Find(y => y.ISBN == isbn) != null && (_books.Find(y => y.Availability.Substring(9) == $"Taken by {bookTaker.FullName}")) == null)))
                 {
                     Console.WriteLine("This book is not taken by you.");
                     Console.WriteLine("Enter another ISBN: ");
@@ -168,7 +163,7 @@ namespace Services
                 Console.WriteLine("Enter the date of returning the book: ");
                 var returnDate = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
                 TimeSpan duration = returnDate.Subtract(startDate);
-                if (duration.Days / 7 > 8)
+                if (duration.Days > 60)
                     Console.WriteLine("YOU ARE LATE! No worries though...");
                 else
                     Console.WriteLine("Hope you liked it!");
@@ -260,6 +255,19 @@ namespace Services
                 tw.WriteLine(bookJson.ToString());
                 tw.Close();
             }
+        }
+
+        public void CheckIfLate()
+        {
+            Console.WriteLine("Enter the date of taking the book: ");
+            var startDate = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            Console.WriteLine("Enter the date of returning the book: ");
+            var returnDate = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
+            TimeSpan duration = returnDate.Subtract(startDate);
+            if (duration.Days > 60)
+                Console.WriteLine("YOU ARE LATE! No worries though...");
+            else
+                Console.WriteLine("Hope you liked it!");
         }
     }
 }
