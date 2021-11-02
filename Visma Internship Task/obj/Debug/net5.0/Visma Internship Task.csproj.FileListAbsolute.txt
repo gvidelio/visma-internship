@@ -42,3 +42,25 @@ C:\Users\Gvidas\OneDrive\Dokumentai\Visma\Visma Internship Task\Visma Internship
 C:\Users\Gvidas\OneDrive\Dokumentai\Visma\Visma Internship Task\Visma Internship Task\obj\Debug\net5.0\ref\Visma Internship Task.dll
 C:\Users\Gvidas\OneDrive\Dokumentai\Visma\Visma Internship Task\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.pdb
 C:\Users\Gvidas\OneDrive\Dokumentai\Visma\Visma Internship Task\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.genruntimeconfig.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Visma Internship Task.exe
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Visma Internship Task.deps.json
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Visma Internship Task.runtimeconfig.json
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Visma Internship Task.runtimeconfig.dev.json
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Visma Internship Task.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\ref\Visma Internship Task.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Visma Internship Task.pdb
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Repositories.Entities.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Services.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Services.pdb
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\bin\Debug\net5.0\Repositories.Entities.pdb
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.csproj.AssemblyReference.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.AssemblyInfoInputs.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.AssemblyInfo.cs
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.csproj.CoreCompileInputs.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.csproj.CopyComplete
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\ref\Visma Internship Task.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.pdb
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Visma Internship Task\obj\Debug\net5.0\Visma Internship Task.genruntimeconfig.cache
