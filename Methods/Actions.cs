@@ -9,13 +9,14 @@ using System.Text.RegularExpressions;
 
 namespace Services
 {
-    public class Methods
+    public class Actions
     {
         private string _path = @"..\..\bookJson.json";
         private List<Book> _books;
-        public Methods methods;
+        public Actions methods;
         private List<BookTaker> _bookTaker = new List<BookTaker>();
 
+        //read json file to object
         public void Setup(string path = null)
         {
             if (path == null)
@@ -34,6 +35,7 @@ namespace Services
             }          
         }
 
+        //add a new book
         public void Add()
         {
             var book = new Book();
@@ -47,16 +49,19 @@ namespace Services
             Console.WriteLine("Enter the language of the book: ");
             book.Language = Console.ReadLine();
 
+            //validate date input
             Console.WriteLine("Enter the publication date (yyyy-MM-dd) of the book: ");
             var publicationDate = Console.ReadLine();
             DateTime d;
-            while (DateTime.TryParseExact(publicationDate.ToString(), "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out d) == false)
+            while (DateTime.TryParseExact(publicationDate.ToString(), "yyyy-MM-dd", 
+                CultureInfo.InvariantCulture, DateTimeStyles.None, out d) == false)
             {
                 Console.WriteLine("Wrong format! Try again with yyyy-MM-dd: ");
                 publicationDate = Console.ReadLine();
             }
             book.PublicationDate = DateTime.ParseExact(publicationDate, "yyyy-MM-dd", CultureInfo.InvariantCulture); ;
 
+            //validate ISBN input
             Console.WriteLine("Enter the ISBN of the book (please follow the required format for the ISBN): ");
             var isbn = Console.ReadLine();
             var regex = new Regex(@"(ISBN[-]*(1[03])*[ ]*(: ){0,1})*(([0-9Xx][- ]*){13}|([0-9Xx][- ]*){10})");
@@ -67,6 +72,7 @@ namespace Services
                 isbn = Console.ReadLine();
             }
 
+            //check if entered ISBN exists
             while (_books.Find(x => x.ISBN == isbn) != null)
             {
                 Console.WriteLine("Such book already exists. Try again with another ISBN: ");
@@ -78,6 +84,7 @@ namespace Services
             _books.Add(book);
         }
 
+        //take a book from the library
         public void Take()
         {
             var bookTaker = new BookTaker();
@@ -85,14 +92,7 @@ namespace Services
             Console.WriteLine("Enter your name: ");
             bookTaker.FullName = Console.ReadLine();
 
-            Console.WriteLine("Enter the number of weeks you want to take the book for:");
-            var weeks = Convert.ToInt32(Console.ReadLine());
-            while (weeks > 8)
-            {
-                Console.WriteLine("Sorry, you can take the book for no longer than 8 weeks");
-                weeks = Convert.ToInt32(Console.ReadLine());
-            }
-
+            //assure that no more than 3 books are taken
             Console.WriteLine("How many books do you want to take?");
             var quantity = Convert.ToInt32(Console.ReadLine());
             while (quantity > 3)
@@ -103,11 +103,22 @@ namespace Services
 
             for (int i = 0; i < quantity; i++)
             {
+                //assure that the book is taken for no longer than 2 months
+                Console.WriteLine("Enter the number of months you want to take the book for:");
+                var months = Convert.ToInt32(Console.ReadLine());
+                while (months > 2)
+                {
+                    Console.WriteLine("Sorry, you can take the book for no longer than 8 weeks");
+                    months = Convert.ToInt32(Console.ReadLine());
+                }
+
                 Console.WriteLine("Enter the ISBN of the book you want to take: ");
                 var isbn = Console.ReadLine();
 
-
-                while (_books.Find(y => y.ISBN == isbn) == null || ((_books.Find(y => y.ISBN == isbn) != null && (_books.Find(y => y.Availability.Substring(0, 1) == "T")) == null)))
+                //assure that the book is in the library and is not taken by someone else
+                while (_books.Find(y => y.ISBN == isbn) == null
+                    || ((_books.Find(y => y.ISBN == isbn) != null 
+                    && (_books.Find(y => y.Availability.Substring(0, 1) == "T")) == null)))
                 {
                     Console.WriteLine("This book is currently unavailable");
                     Console.WriteLine("Enter another ISBN: ");
@@ -119,6 +130,7 @@ namespace Services
 
         }
 
+        //return the book to the library
         public void Return()
         {
             var book = new Book();
@@ -126,6 +138,7 @@ namespace Services
             Console.WriteLine("Enter your name: ");
             var name = Console.ReadLine();
 
+            //check for the number of books to return
             Console.WriteLine("How many books you want to return?");
             var quantity = Convert.ToInt32(Console.ReadLine());
             while (quantity > 3)
@@ -139,12 +152,17 @@ namespace Services
                 Console.WriteLine("Enter the ISBN of the book you want to return: ");
                 string isbn = Console.ReadLine();
 
-                while (_books.Find(y => y.ISBN == isbn) == null || ((_books.Find(y => y.ISBN == isbn) != null && (_books.Find(y => y.Availability.Substring(9) == $"{name}")) == null)))
+                //check whether the book exists and is taken by the user
+                while (_books.Find(y => y.ISBN == isbn) == null 
+                    || ((_books.Find(y => y.ISBN == isbn) != null 
+                    && (_books.Find(y => y.Availability.Substring(9) == $"{name}")) == null)))
                 {
                     Console.WriteLine("This book is not taken by you.");
                     Console.WriteLine("Enter another ISBN: ");
                     isbn = Console.ReadLine();
                 }
+
+                //check if the book is not returned late
                 Console.WriteLine("Enter the date of taking the book: ");
                 var startDate = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
                 Console.WriteLine("Enter the date of returning the book: ");
@@ -160,19 +178,25 @@ namespace Services
 
         }
 
+        //list books by specifying the filter
         public void List()
         {
-            Console.WriteLine("Possible filters: Name, Author, Category, Language, ISBN, Availability(Taken/Available) or All");
+            Console.WriteLine("Possible filters: Name, Author, Category, " +
+                "Language, ISBN, Availability(Taken/Available) or All");
             Console.WriteLine("Enter the filter: ");
             var filter = Console.ReadLine();
             var filterValue = "";
 
-            while (filter != "Name" && filter != "Author" && filter != "Category" && filter != "Language" && filter != "ISBN" && filter != "Availability" && filter != "All")
+            //validate the filter input
+            while (filter != "Name" && filter != "Author" 
+                && filter != "Category" && filter != "Language" 
+                && filter != "ISBN" && filter != "Availability" && filter != "All")
             {
                 Console.WriteLine("Wrong filter. Try again: ");
                 filter = Console.ReadLine();
             }
 
+            //validate the specification of the filter
             if (filter == "All")
                 Console.WriteLine(JsonConvert.SerializeObject(_books, Formatting.Indented));
             else if (filter == "Availability")
@@ -196,17 +220,19 @@ namespace Services
                 Console.WriteLine(JsonConvert.SerializeObject(_books.Where(x => x.Language == filterValue), Formatting.Indented));
             else if (filter == "ISBN")
                 Console.WriteLine(JsonConvert.SerializeObject(_books.Where(x => x.ISBN == filterValue), Formatting.Indented));
-            else if (filterValue == "Availability")
+            else if (filterValue == "Available")
                 Console.WriteLine(JsonConvert.SerializeObject(_books.Where(x => x.Availability == filterValue), Formatting.Indented));
             else if (filterValue == "Taken")
                 Console.WriteLine(JsonConvert.SerializeObject(_books.Where(x => x.Availability.Substring(0, 5) == "Taken"), Formatting.Indented));
         }
 
+        //return all books
         public List<Book> GetBooks()
         {
             return _books;
         }
 
+        //delete a specific book
         public void Delete(string isbn = null)
         {
             Console.WriteLine("Enter the ISBN of the book you want to delete: ");
@@ -215,6 +241,7 @@ namespace Services
                 isbn = Console.ReadLine();
             }
             
+            //check whether the book exists in the library
             while (_books.Find(x => x.ISBN == isbn) == null)
             {
                 Console.WriteLine("There is no such book. Try again with another ISBN: ");
@@ -223,6 +250,7 @@ namespace Services
             _books.Remove(_books.FirstOrDefault(x => x.ISBN == isbn));
         }
 
+        //write the new book list in to the file
         public void Close()
         {
             File.Delete(_path);

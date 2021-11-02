@@ -7,7 +7,7 @@ namespace Visma_Internship_Task
     {
         static void Main(string[] args)
         {
-            var methods = new Methods();
+            var methods = new Actions();
             methods.Setup();
             var program = new Program();
 
@@ -18,6 +18,7 @@ namespace Visma_Internship_Task
             Console.WriteLine("Your action:");
             var action = Console.ReadLine();
 
+            //check for the required action
             while (true)
             {
                 if (action == "Add")

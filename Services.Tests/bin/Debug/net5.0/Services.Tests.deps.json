@@ -1030,16 +1030,10 @@
       "Services/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "Repositories.Entities": "1.0.0",
-          "Services.Interfaces": "1.0.0"
+          "Repositories.Entities": "1.0.0"
         },
         "runtime": {
           "Services.dll": {}
-        }
-      },
-      "Services.Interfaces/1.0.0": {
-        "runtime": {
-          "Services.Interfaces.dll": {}
         }
       }
     }
@@ -1679,11 +1673,6 @@
       "sha512": ""
     },
     "Services/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Services.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
