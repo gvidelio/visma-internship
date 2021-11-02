@@ -115,7 +115,8 @@ namespace Services
                 var isbn = Console.ReadLine();
 
                 //assure that the book is in the library and is not taken by someone else
-                while (_books.Find(y => y.ISBN == isbn) == null || (_books.Find(y => y.ISBN == isbn) != null && _books.Find(y => y.Availability.Substring(0,1) == "T") != null))
+                while (_books.Find(y => y.ISBN == isbn) == null 
+                    || (_books.Find(y => (y.ISBN == isbn) && (y.Availability.Substring(0,1) == "T")) != null))
                 {
                     Console.WriteLine("This book is currently unavailable");
                     Console.WriteLine("Enter another ISBN: ");
@@ -150,7 +151,8 @@ namespace Services
                 string isbn = Console.ReadLine();
 
                 //check whether the book exists and is taken by the user
-                while (_books.Find(y => y.ISBN == isbn) == null || ((_books.Find(y => y.ISBN == isbn) != null && (_books.Find(y => y.Availability.Substring(9) == $"Taken by {bookTaker.FullName}")) == null)))
+                while (_books.Find(y => y.ISBN == isbn) == null || 
+                    _books.Find(y => (y.ISBN == isbn) && (y.Availability != $"Taken by {bookTaker.FullName}")
                 {
                     Console.WriteLine("This book is not taken by you.");
                     Console.WriteLine("Enter another ISBN: ");
@@ -255,19 +257,6 @@ namespace Services
                 tw.WriteLine(bookJson.ToString());
                 tw.Close();
             }
-        }
-
-        public void CheckIfLate()
-        {
-            Console.WriteLine("Enter the date of taking the book: ");
-            var startDate = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            Console.WriteLine("Enter the date of returning the book: ");
-            var returnDate = DateTime.ParseExact(Console.ReadLine(), "yyyy-MM-dd", CultureInfo.InvariantCulture);
-            TimeSpan duration = returnDate.Subtract(startDate);
-            if (duration.Days > 60)
-                Console.WriteLine("YOU ARE LATE! No worries though...");
-            else
-                Console.WriteLine("Hope you liked it!");
         }
     }
 }

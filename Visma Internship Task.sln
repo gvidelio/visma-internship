@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Visma Internship Task", "Visma Internship Task\Visma Internship Task.csproj", "{4E7364AC-33F2-4488-BD7E-11FD8E5A4E31}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repositories.Entities", "Repositories.Entities\Repositories.Entities.csproj", "{6242411B-E7A5-40ED-856E-91FA353C06C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Entities", "Repositories.Entities\Services.Entities.csproj", "{6242411B-E7A5-40ED-856E-91FA353C06C7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Methods\Services.csproj", "{3F46C51B-CCA5-4E95-92BC-85C60AE38449}"
 EndProject

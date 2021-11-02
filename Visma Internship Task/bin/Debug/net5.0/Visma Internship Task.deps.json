@@ -22,18 +22,18 @@
           }
         }
       },
-      "Repositories.Entities/1.0.0": {
-        "runtime": {
-          "Repositories.Entities.dll": {}
-        }
-      },
       "Services/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "Repositories.Entities": "1.0.0"
+          "Services.Entities": "1.0.0"
         },
         "runtime": {
           "Services.dll": {}
+        }
+      },
+      "Services.Entities/1.0.0": {
+        "runtime": {
+          "Services.Entities.dll": {}
         }
       }
     }
@@ -51,12 +51,12 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "Repositories.Entities/1.0.0": {
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Services/1.0.0": {
+    "Services.Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

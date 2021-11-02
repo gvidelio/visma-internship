@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj",
-      "projectName": "Repositories.Entities",
-      "projectPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Services.Entities.csproj",
+      "projectName": "Services.Entities",
+      "projectPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Services.Entities.csproj",
       "packagesPath": "C:\\Users\\Gvidas\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\obj\\",
       "projectStyle": "PackageReference",

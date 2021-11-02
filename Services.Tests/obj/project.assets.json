@@ -1581,28 +1581,28 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
-      "Repositories.Entities/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "compile": {
-          "bin/placeholder/Repositories.Entities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Repositories.Entities.dll": {}
-        }
-      },
       "Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "Repositories.Entities": "1.0.0"
+          "Services.Entities": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Services.dll": {}
         },
         "runtime": {
           "bin/placeholder/Services.dll": {}
+        }
+      },
+      "Services.Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Services.Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Services.Entities.dll": {}
         }
       }
     }
@@ -5638,15 +5638,15 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Repositories.Entities/1.0.0": {
-      "type": "project",
-      "path": "../Repositories.Entities/Repositories.Entities.csproj",
-      "msbuildProject": "../Repositories.Entities/Repositories.Entities.csproj"
-    },
     "Services/1.0.0": {
       "type": "project",
       "path": "../Methods/Services.csproj",
       "msbuildProject": "../Methods/Services.csproj"
+    },
+    "Services.Entities/1.0.0": {
+      "type": "project",
+      "path": "../Repositories.Entities/Services.Entities.csproj",
+      "msbuildProject": "../Repositories.Entities/Services.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {

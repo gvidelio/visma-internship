@@ -11,14 +11,14 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Repositories.Entities/1.0.0": {
+      "Services.Entities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/Repositories.Entities.dll": {}
+          "bin/placeholder/Services.Entities.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Repositories.Entities.dll": {}
+          "bin/placeholder/Services.Entities.dll": {}
         }
       }
     }
@@ -51,16 +51,16 @@
         "packageIcon.png"
       ]
     },
-    "Repositories.Entities/1.0.0": {
+    "Services.Entities/1.0.0": {
       "type": "project",
-      "path": "../Repositories.Entities/Repositories.Entities.csproj",
-      "msbuildProject": "../Repositories.Entities/Repositories.Entities.csproj"
+      "path": "../Repositories.Entities/Services.Entities.csproj",
+      "msbuildProject": "../Repositories.Entities/Services.Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Newtonsoft.Json >= 13.0.1",
-      "Repositories.Entities >= 1.0.0"
+      "Services.Entities >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -95,8 +95,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj": {
-              "projectPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj"
+            "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Services.Entities.csproj": {
+              "projectPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Services.Entities.csproj"
             }
           }
         }

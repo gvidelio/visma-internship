@@ -32,8 +32,6 @@ C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\ne
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\Services.dll
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\ref\Services.dll
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\Services.pdb
-C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\Repositories.Entities.dll
-C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\Repositories.Entities.pdb
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\net5.0\Services.csproj.AssemblyReference.cache
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\net5.0\Services.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\net5.0\Services.AssemblyInfoInputs.cache
@@ -43,3 +41,5 @@ C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\ne
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\net5.0\Services.dll
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\net5.0\ref\Services.dll
 C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\obj\Debug\net5.0\Services.pdb
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\Services.Entities.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Methods\bin\Debug\net5.0\Services.Entities.pdb

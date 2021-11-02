@@ -1,0 +1,12 @@
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\bin\Debug\net5.0\Services.Entities.deps.json
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\bin\Debug\net5.0\Services.Entities.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\bin\Debug\net5.0\ref\Services.Entities.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\bin\Debug\net5.0\Services.Entities.pdb
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.csproj.AssemblyReference.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.AssemblyInfoInputs.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.AssemblyInfo.cs
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\ref\Services.Entities.dll
+C:\Users\Gvidas\OneDrive\Dokumentai\GitHub\visma-internship\Repositories.Entities\obj\Debug\net5.0\Services.Entities.pdb
