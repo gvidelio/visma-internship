@@ -11,7 +11,7 @@ namespace Services
 {
     public class Methods
     {
-        private string _path = @"bookJson.json";
+        private string _path = @"..\..\bookJson.json";
         private List<Book> _books;
         public Methods methods;
         private List<BookTaker> _bookTaker = new List<BookTaker>();

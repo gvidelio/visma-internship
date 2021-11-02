@@ -13,7 +13,7 @@ namespace Services.Tests
         [Fact]
         public void GetBooks_ReturnsAllBooks()
         {
-            _methods.Setup(@"C:\Users\Gvidas\OneDrive\Dokumentai\Visma\Visma Internship Task\bookJson1.json");
+            _methods.Setup(@"..\..\bookJson1.json");
             List<Book> books = _methods.GetBooks();
 
             _methods.Delete("123");
