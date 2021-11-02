@@ -13,7 +13,7 @@ namespace Services.Tests
         [Fact]
         public void Delete_OneBook_ReturnsUpdatedBook()
         {
-            _methods.Setup(@"..\..\bookJson1.json");
+            _methods.Setup(@"..\..\bookJson.json");
             List<Book> books = _methods.GetBooks();
 
             _methods.Delete("123");
