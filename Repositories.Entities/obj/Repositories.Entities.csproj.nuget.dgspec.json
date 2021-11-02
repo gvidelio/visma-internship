@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\visma-internship-task\\Repositories.Entities\\Repositories.Entities.csproj": {}
+    "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\visma-internship-task\\Repositories.Entities\\Repositories.Entities.csproj": {
+    "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\visma-internship-task\\Repositories.Entities\\Repositories.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj",
         "projectName": "Repositories.Entities",
-        "projectPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\visma-internship-task\\Repositories.Entities\\Repositories.Entities.csproj",
+        "projectPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\Repositories.Entities.csproj",
         "packagesPath": "C:\\Users\\Gvidas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\visma-internship-task\\Repositories.Entities\\obj\\",
+        "outputPath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\GitHub\\visma-internship\\Repositories.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
