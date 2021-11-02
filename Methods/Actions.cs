@@ -31,7 +31,7 @@ namespace Services
                 var jsonString = read.ReadToEnd();
                 _books = JsonConvert.DeserializeObject<List<Book>>(jsonString) ?? new List<Book>();
                 read.Close();
-            }          
+            }
         }
 
         //add a new book
@@ -52,7 +52,7 @@ namespace Services
             Console.WriteLine("Enter the publication date (yyyy-MM-dd) of the book: ");
             var publicationDate = Console.ReadLine();
             DateTime d;
-            while (DateTime.TryParseExact(publicationDate.ToString(), "yyyy-MM-dd", 
+            while (DateTime.TryParseExact(publicationDate.ToString(), "yyyy-MM-dd",
                 CultureInfo.InvariantCulture, DateTimeStyles.None, out d) == false)
             {
                 Console.WriteLine("Wrong format! Try again with yyyy-MM-dd: ");
@@ -115,8 +115,8 @@ namespace Services
                 var isbn = Console.ReadLine();
 
                 //assure that the book is in the library and is not taken by someone else
-                while (_books.Find(y => y.ISBN == isbn) == null 
-                    || (_books.Find(y => (y.ISBN == isbn) && (y.Availability.Substring(0,1) == "T")) != null))
+                while (_books.Find(y => y.ISBN == isbn) == null
+                    || (_books.Find(y => (y.ISBN == isbn) && (y.Availability.Substring(0, 1) == "T")) != null))
                 {
                     Console.WriteLine("This book is currently unavailable");
                     Console.WriteLine("Enter another ISBN: ");
@@ -151,7 +151,7 @@ namespace Services
                 string isbn = Console.ReadLine();
 
                 //check whether the book exists and is taken by the user
-                while (_books.Find(y => y.ISBN == isbn) == null || 
+                while (_books.Find(y => y.ISBN == isbn) == null ||
                     (_books.Find(y => (y.ISBN == isbn) && (y.Availability != $"Taken by {bookTaker.FullName}")) != null))
                 {
                     Console.WriteLine("This book is not taken by you.");
@@ -185,8 +185,8 @@ namespace Services
             var filterValue = "";
 
             //validate the filter input
-            while (filter != "Name" && filter != "Author" 
-                && filter != "Category" && filter != "Language" 
+            while (filter != "Name" && filter != "Author"
+                && filter != "Category" && filter != "Language"
                 && filter != "ISBN" && filter != "Availability" && filter != "All")
             {
                 Console.WriteLine("Wrong filter. Try again: ");
@@ -237,7 +237,7 @@ namespace Services
             {
                 isbn = Console.ReadLine();
             }
-            
+
             //check whether the book exists in the library
             while (_books.Find(x => x.ISBN == isbn) == null)
             {
@@ -257,6 +257,13 @@ namespace Services
                 tw.WriteLine(bookJson.ToString());
                 tw.Close();
             }
+        }
+
+        public void Success()
+        {
+            Console.WriteLine("Success!\n");
+            Console.WriteLine("The commands are: Add, Take, Return, List, Delete, Exit.\n");
+            Console.WriteLine("Your action:");
         }
     }
 }

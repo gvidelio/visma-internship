@@ -1,8 +1,6 @@
-using Xunit;
-using System;
-using Services;
 using Repositories.Entities;
 using System.Collections.Generic;
+using Xunit;
 
 namespace Services.Tests
 {

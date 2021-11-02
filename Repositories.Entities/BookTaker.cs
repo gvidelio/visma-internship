@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Repositories.Entities
+﻿namespace Repositories.Entities
 {
     public class BookTaker
     {
