@@ -1,1 +1,1 @@
-# visma-internship
+# visma-library

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "cmoD0CGXGssR+i6KloCKgK6S3LG3aA67fGUPbU8dH9PWaLxnYSdu1Pm2AHnbQwAHwWG50ChXEnt0aWZ+VdJVbQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gvidas\\OneDrive\\Dokumentai\\visma-internship-task\\Methods\\Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gvidas\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
